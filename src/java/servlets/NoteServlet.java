@@ -71,8 +71,9 @@ public class NoteServlet extends HttpServlet {
         
         title = br.readLine();
         content = br.readLine();
-        note = new Note(title,content);
         
+        note = new Note(title,content);
+        System.out.println(note.getTitle() + "\n" + note.getContent());
         request.setAttribute("title", note.getTitle());
         request.setAttribute("content", note.getContent());
         
